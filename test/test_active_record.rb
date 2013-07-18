@@ -23,15 +23,18 @@ class TestActiveRecord < Minitest::Test
   def test_has_one_mongoid
     @u = Ungulate.new
     assert_equal true, @u.respond_to?('mango')
+    assert_equal false, @u.respond_to?('mangos')
   end
 
   def test_has_many_mongoids
     @u = Ungulate.new
     assert_equal true, @u.respond_to?('bongos')
+    assert_equal false, @u.respond_to?('bongo')
   end
 
   def test_belongs_to_mongoid
     @u = Ungulate.new
     assert_equal true, @u.respond_to?('congo')
+    assert_equal false, @u.respond_to?('congos')
   end
 end
