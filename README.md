@@ -57,12 +57,15 @@ end
 
 1. Fork it
 2. Create your feature branch (`git checkout -b my-new-feature`)
-2a. No, seriously, create a branch. Call it `ravenous-monkey` for all I care, but create a branch.
-3. Commit your changes (`git commit -am 'Add some feature'`)
-4. Push to the branch (`git push origin my-new-feature`)
-5. Create new Pull Request
+3. No, seriously, create a branch. Call it `ravenous-monkey` for all I care, but create a branch.
+4. Commit your changes (`git commit -am 'Add some feature'`)
+5. Push to the branch (`git push origin my-new-feature`)
+6. Create new Pull Request
 
-Make sure you include tests! Tests are good. Tests are required. All hail tests.
+Make sure you include tests! Tests are good. Tests are required. All hail tests. 
+
+Consort tests are built with Minitest; beyond that, I'm flexible. `Minitest::Unit` and `Minitest::Spec` are both fine.
+
 
 ## Author
 
