@@ -26,7 +26,7 @@ Or install it yourself as:
 
 Ruby 1.9.3 or 2.0.0. Alternate VMs compatible with these versions should also work.
 
-Ruby 1.8 is not supported, but should theoretically work if all the ORMs involved support it.
+Ruby 1.8 is not supported.
 
 ### Rails Compatibility
 
