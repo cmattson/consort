@@ -1,5 +1,6 @@
-require "consort/version"
+require 'consort/version'
 
-module Consort
-  # Your code goes here...
-end
+require 'active_record'
+
+require 'consort/active_record'
+require 'consort/mongoid'
