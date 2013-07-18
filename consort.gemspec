@@ -8,7 +8,6 @@ Gem::Specification.new do |spec|
   spec.version       = Consort::VERSION
   spec.authors       = ["Colin Mattson"]
   spec.email         = ["colinm@pixelcloud.us"]
-  spec.description   = %q{TODO: Write a gem description}
   spec.description   = %q{Consort allows you to define relationships between various ORMs and access them similarly to ActiveRecord associations.}
   spec.summary       = %q{Ease integration between ActiveRecord and NoSQL solutions.}
   spec.homepage      = "https://github.com/cmattson/consort"
@@ -19,10 +18,18 @@ Gem::Specification.new do |spec|
   spec.test_files    = spec.files.grep(%r{^(test|spec|features)/})
   spec.require_paths = ["lib"]
 
-  spec.add_development_dependency "bundler", "~> 1.3"
+  spec.add_development_dependency "bundler",      "~> 1.3"
   spec.add_development_dependency "rake"
-  spec.add_development_dependency "minitest", "~> 5.0"
+  spec.add_development_dependency "minitest"
   spec.add_development_dependency "activerecord", "~> 3.2"
-  spec.add_development_dependency "mongoid", "~> 3.1"
+  spec.add_development_dependency "activesupport","~> 3.2"
+  spec.add_development_dependency "mongoid",      "~> 3.1"
+  spec.add_development_dependency "coveralls"
+  spec.add_development_dependency "sqlite3"
+  spec.add_development_dependency "pry"
+  spec.add_development_dependency 'combustion'
 
+  spec.add_runtime_dependency "activesupport",  "~> 3.2"
+  spec.add_runtime_dependency "activerecord",   "~> 3.2"
+  spec.add_runtime_dependency "mongoid",        "~> 3.1"
 end
