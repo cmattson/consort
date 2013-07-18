@@ -37,19 +37,19 @@ Consort allows basic relationships to be defined between ActiveRecord and other 
 On an ActiveRecord model, you can define relationships with Mongoid:
 ```ruby
 class Airframe < ActiveRecord::Base
-	belongs_to_mongoid	:manufacturer
-	has_one_mongoid		:powerplant
-	has_many_mongoids	:variants
+  belongs_to_mongoid  :manufacturer
+  has_one_mongoid   :powerplant
+  has_many_mongoids :variants
 end
 ```
 
 On a Mongoid model, you can define relationships with ActiveRecord:
 ```ruby
 class Airframe
-	include Mongoid::Document
-	belongs_to_active_record 	:manufacturer
-	has_one_active_record 		:powerplant
-	has_many_active_records 	:variants
+  include Mongoid::Document
+  belongs_to_active_record  :manufacturer
+  has_one_active_record     :powerplant
+  has_many_active_records   :variants
 end
 ```
 
