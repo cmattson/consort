@@ -9,6 +9,7 @@ Gem::Specification.new do |spec|
   spec.authors       = ["Colin Mattson"]
   spec.email         = ["colinm@pixelcloud.us"]
   spec.description   = %q{TODO: Write a gem description}
+  spec.description   = %q{Consort allows you to define relationships between various ORMs and access them similarly to ActiveRecord associations.}
   spec.summary       = %q{Ease integration between ActiveRecord and NoSQL solutions.}
   spec.homepage      = "https://github.com/cmattson/consort"
   spec.license       = "MIT"
