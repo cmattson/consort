@@ -9,8 +9,8 @@ Gem::Specification.new do |spec|
   spec.authors       = ["Colin Mattson"]
   spec.email         = ["colinm@pixelcloud.us"]
   spec.description   = %q{TODO: Write a gem description}
-  spec.summary       = %q{TODO: Write a gem summary}
-  spec.homepage      = ""
+  spec.summary       = %q{Ease integration between ActiveRecord and NoSQL solutions.}
+  spec.homepage      = "https://github.com/cmattson/consort"
   spec.license       = "MIT"
 
   spec.files         = `git ls-files`.split($/)
@@ -20,4 +20,8 @@ Gem::Specification.new do |spec|
 
   spec.add_development_dependency "bundler", "~> 1.3"
   spec.add_development_dependency "rake"
+  spec.add_development_dependency "minitest", "~> 5.0"
+  spec.add_development_dependency "activerecord", "~> 3.2"
+  spec.add_development_dependency "mongoid", "~> 3.1"
+
 end
