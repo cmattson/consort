@@ -54,7 +54,7 @@ class Airframe
   include Mongoid::Document
   belongs_to_active_record  :manufacturer
   has_one_active_record     :powerplant
-  has_many_active_records   :variants
+  has_many_active_record    :variants
 end
 ```
 
