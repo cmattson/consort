@@ -14,12 +14,18 @@ module Consort
         CODE
       end
 
-      def has_many_mongoids(klass)
+      def has_many_mongoid(klass)
         class_eval <<-CODE
           def #{klass}
             #{klass.to_s.classify}.where(#{name.foreign_key}: id)
           end
         CODE
+      end
+
+      # DEPRECATED. Pass through for now. Removed in 1.0.0.
+      def has_many_mongoids(klass)
+        ActiveSupport::Deprecation.warn "Please use the singular has_many_mongoid instead."
+        has_many_mongoid(klass)
       end
 
       def belongs_to_mongoid(klass)

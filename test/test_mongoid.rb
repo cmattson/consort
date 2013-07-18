@@ -8,6 +8,10 @@ class TestMongoid < Minitest::Test
     assert_equal true, Camel.respond_to?(:has_one_active_record)
   end
 
+  def test_mongoid_has_many_active_record_defined
+    assert_equal true, Camel.respond_to?(:has_many_active_record)
+  end
+
   def test_mongoid_has_many_active_records_defined
     assert_equal true, Camel.respond_to?(:has_many_active_records)
   end
@@ -22,7 +26,7 @@ class TestMongoid < Minitest::Test
     assert_equal false, @c.respond_to?('tongues')
   end
 
-  def test_has_many_active_records
+  def test_has_many_active_record
     @c = Camel.new
     assert_equal true,  @c.respond_to?('humps')
     assert_equal false, @c.respond_to?('hump')
