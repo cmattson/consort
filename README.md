@@ -43,8 +43,8 @@ On an ActiveRecord model, you can define relationships with Mongoid:
 ```ruby
 class Airframe < ActiveRecord::Base
   belongs_to_mongoid  :manufacturer
-  has_one_mongoid   :powerplant
-  has_many_mongoids :variants
+  has_one_mongoid     :powerplant
+  has_many_mongoids   :variants
 end
 ```
 
