@@ -1,5 +1,9 @@
 # Consort
 
+[![Build Status](https://travis-ci.org/cmattson/consort.png?branch=master)](https://travis-ci.org/cmattson/consort)
+[![Coverage Status](https://coveralls.io/repos/cmattson/consort/badge.png)](https://coveralls.io/r/cmattson/consort)
+[![Code Climate](https://codeclimate.com/github/cmattson/consort.png)](https://codeclimate.com/github/cmattson/consort)
+
 Mixing ActiveRecord and other ORMs like Mongoid? Need relationships between those data layers? Really hate either implementing a bunch of accessors or copy-pasting the same metaprogramming over and over again?
 
 Use Consort! Built around a simple modification to standard ActiveRecord association syntax, Consort allows you to more easily retrieve data from cross-ORM single-to-single and single-to-many associations without writing or recycling code.
