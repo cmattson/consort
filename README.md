@@ -39,12 +39,17 @@ Rails 4 support is planned.
 
 Consort allows basic relationships to be defined between ActiveRecord and other ORM layers. Simply add `_[ORM_TYPE]` to what you'd normally use. `active_record` and `mongoid` are currently supported.
 
+The relationship macros are designed to read cleanly:
+
+* Airframe has one ActiveRecord powerplant
+* Airframe has many Mongoid variants
+
 On an ActiveRecord model, you can define relationships with Mongoid:
 ```ruby
 class Airframe < ActiveRecord::Base
   belongs_to_mongoid  :manufacturer
   has_one_mongoid     :powerplant
-  has_many_mongoids   :variants
+  has_many_mongoid    :variants
 end
 ```
 
