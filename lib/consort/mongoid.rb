@@ -14,7 +14,7 @@ module Consort
       def has_many_active_record(klass)
         class_eval <<-CODE
           def #{klass}
-            #{klass.to_s.classify}.where(#{name.foreign_key}: id)  
+            #{klass.to_s.classify}.where(#{name.foreign_key}: id)
           end
         CODE
       end
