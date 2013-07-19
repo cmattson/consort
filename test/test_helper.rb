@@ -1,6 +1,10 @@
 plugin_test_dir = File.dirname(__FILE__)
 
 require 'rubygems'
+
+require 'coveralls'
+Coveralls.wear!
+
 require 'bundler/setup'
 require 'pry'
 
@@ -11,9 +15,6 @@ require 'minitest/unit'
 require 'minitest/spec'
 require 'minitest/pride'
 require 'minitest/benchmark' if ENV['BENCH']
-
-require 'coveralls'
-Coveralls.wear!
 
 require 'active_record'
 require 'mongoid'
