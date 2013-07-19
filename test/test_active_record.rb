@@ -1,6 +1,6 @@
 require 'minitest/autorun'
 
-class TestActiveRecord < Minitest::Test
+class TestActiveRecord < MiniTest::Unit::TestCase
   def setup
   end
 
