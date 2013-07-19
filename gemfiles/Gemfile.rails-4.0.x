@@ -8,5 +8,5 @@ gem "activerecord",   "~> 4.0.0"
 gem "mongoid",  :git => 'https://github.com/mongoid/mongoid.git'
 gem "coveralls"
 gem "sqlite3"
-# gem "pry"
+gem "pry"
 gem "combustion"
