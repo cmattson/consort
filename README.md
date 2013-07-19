@@ -67,7 +67,7 @@ end
 
 ## Contributing
 
-1. Fork it
+1. [Fork it](https://github.com/cmattson/consort/fork)
 2. Create your feature branch (`git checkout -b my-new-feature`)
 3. No, seriously, create a branch. Call it `ravenous-monkey` for all I care, but create a branch.
 4. Commit your changes (`git commit -am 'Add some feature'`)
