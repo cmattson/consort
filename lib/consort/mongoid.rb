@@ -21,7 +21,7 @@ module Consort
 
       # DEPRECATED. Will be removed in 1.0.0.
       def has_many_active_records(klass)
-        ActiveSupport::Deprecation.warn "Please use the singular has_many_active_record instead."
+        ActiveSupport::Deprecation.warn 'Please use the singular has_many_active_record instead.'
         has_many_active_record(klass)
       end
 

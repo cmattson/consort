@@ -22,14 +22,12 @@ require 'consort'
 
 require 'yaml'
 require 'erb'
-ActiveRecord::Base.configurations = YAML::load(ERB.new(IO.read(plugin_test_dir + "/db/database.yml")).result)
-ActiveRecord::Base.establish_connection(ENV["DB"] ||= "sqlite3mem")
+ActiveRecord::Base.configurations = YAML.load(ERB.new(IO.read(plugin_test_dir + '/db/database.yml')).result)
+ActiveRecord::Base.establish_connection(ENV['DB'] ||= 'sqlite3mem')
 ActiveRecord::Migration.verbose = false
 
 require 'combustion/database'
 Combustion::Database.create_database(ActiveRecord::Base.configurations[ENV["DB"]])
-load(File.join(plugin_test_dir, "db", "schema.rb"))
- 
+load(File.join(plugin_test_dir, 'db', 'schema.rb'))
 
 require 'models'
-

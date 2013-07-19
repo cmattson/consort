@@ -24,7 +24,7 @@ module Consort
 
       # DEPRECATED. Pass through for now. Removed in 1.0.0.
       def has_many_mongoids(klass)
-        ActiveSupport::Deprecation.warn "Please use the singular has_many_mongoid instead."
+        ActiveSupport::Deprecation.warn 'Please use the singular has_many_mongoid instead.'
         has_many_mongoid(klass)
       end
 

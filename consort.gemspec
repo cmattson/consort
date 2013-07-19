@@ -27,7 +27,7 @@ Gem::Specification.new do |spec|
   spec.add_development_dependency "coveralls"
   spec.add_development_dependency "sqlite3"
   spec.add_development_dependency "pry"
-  spec.add_development_dependency 'combustion'
+  spec.add_development_dependency "combustion"
 
   spec.add_runtime_dependency "activesupport",  "~> 3.2"
   spec.add_runtime_dependency "activerecord",   "~> 3.2"
