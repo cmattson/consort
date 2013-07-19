@@ -9,11 +9,11 @@ Mixing ActiveRecord and other ORMs like Mongoid? Need relationships between thos
 
 Use Consort! Built around a simple modification to standard ActiveRecord association syntax, Consort allows you to more easily retrieve data from cross-ORM single-to-single and single-to-many associations without writing or recycling code.
 
-##### Once More, With 50% Less Jargon
+## Once More, With 50% Less Jargon
 
 If you have a Rails app using both ActiveRecord and Mongoid, you've probably discovered you can't create associations between the two.
 
-Consort allows you to define `has_one`, `has_many`, and `belongs_to` associations between ActiveRecord and Mongoid object classes. (And it can be extended to support nearly any combination of ORM adapters, but ActiveRecord <-> Mongoid is what's written today.)
+Consort allows you to define `has_one`, `has_many`, and `belongs_to` associations between ActiveRecord and Mongoid object classes. (And it can be extended to support nearly any combination of ORM and ODM adapters, but ActiveRecord <-> Mongoid is what's written today.)
 
 ## Installation
 
@@ -37,9 +37,13 @@ Ruby 1.8 is not supported.
 
 ### Rails Compatibility
 
-Consort currently targets Rails 3.2. Mongoid and several other ORM layers have not yet been updated for Rails 4, and most projects are continuing to use Rails 3.2 for now. Consort has not been tested against earlier Rails 3 versions; if you're stuck on an earlier version, let me know how it works for you.
+Consort currently targets Rails 3.2 (or, more accurately, ActiveSupport and ActiveRecord 3.2). Mongoid and several other ORM/ODM layers have not yet been updated for Rails 4, and most new and existing projects are continuing to use Rails 3.2 for now.
 
 Rails 4 support is planned.
+
+### Continuous Integration
+
+Automated CI testing is performed against Ruby 1.9.3 and 2.0.0 using ActiveRecord and ActiveSupport 3.1, 3.2, and 4.0. 
 
 ## Usage
 
