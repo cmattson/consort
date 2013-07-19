@@ -63,7 +63,7 @@ class Airframe
 end
 ```
 
-*Nota bene:* Consort currently provides only basic association accessors.  It does not implement callbacks. Consort also does not currently implement many-to-many associations. I've rarely run into a situation where cross-ORM many-to-many associations make sense, and implementing them would require making opinionated decisions I don't care to make without community input. If this is something you frequently find yourself needing, you'll have to implement it yourself. (Pull requests and feedback are welcome.)
+*Nota bene:* Consort currently provides only basic association accessors.  It does not implement callbacks. Consort also does not currently implement many-to-many associations. I've rarely run into a situation where cross-ORM many-to-many associations make sense, and implementing them would require making opinionated decisions I don't care to make without community input. If this is something you find yourself needing immediately, you'll have to implement it yourself. (Pull requests and feedback are welcome.)
 
 ## Contributing
 
