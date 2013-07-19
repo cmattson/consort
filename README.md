@@ -13,7 +13,7 @@ Use Consort! Built around a simple modification to standard ActiveRecord associa
 
 If you have a Rails app using both ActiveRecord and Mongoid, you've probably discovered you can't create associations between the two.
 
-Consort allows you to define has_one, has_many, and belongs_to associations between ActiveRecord and Mongoid object classes. (And it can be extended to support nearly any combination of ORM adapters, but ActiveRecord <-> Mongoid is what's written today.)
+Consort allows you to define `has_one`, `has_many`, and `belongs_to` associations between ActiveRecord and Mongoid object classes. (And it can be extended to support nearly any combination of ORM adapters, but ActiveRecord <-> Mongoid is what's written today.)
 
 ## Installation
 
@@ -51,6 +51,7 @@ The relationship macros are designed to read cleanly:
 * Airframe has many Mongoid variants
 
 On an ActiveRecord model, you can define relationships with Mongoid:
+
 ```ruby
 class Airframe < ActiveRecord::Base
   belongs_to_mongoid  :manufacturer
@@ -60,12 +61,16 @@ end
 ```
 
 On a Mongoid model, you can define relationships with ActiveRecord:
+
 ```ruby
 class Airframe
   include Mongoid::Document
   belongs_to_active_record  :manufacturer
   has_one_active_record     :powerplant
   has_many_active_record    :variants
+  
+  # Consort expects a foreign key field
+  field :manufacturer_id,   type: Integer
 end
 ```
 
