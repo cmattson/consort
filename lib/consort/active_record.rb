@@ -1,11 +1,15 @@
 module Consort
   ##
-  # Defines instance methods on ActiveRecord objects for defining NoSQL
+  # Defines methods on ActiveRecord objects for creating NoSQL
   # relationships and accessing those related objects.
   module ActiveRecord
     extend ActiveSupport::Concern
 
     module ClassMethods
+      # Defines a `has_one` relationship with a Mongoid object.
+      # @param klass [Symbol]
+      # @example
+      #   has_one_mongoid :dolphin
       def has_one_mongoid(klass)
         class_eval <<-CODE
           def #{klass}
@@ -14,6 +18,11 @@ module Consort
         CODE
       end
 
+      # Defines a `has_many` relationship with a Mongoid object.
+      # @param klass [Symbol] 
+      # @example
+      #   has_many_mongoid :unicorns
+      # @since 0.0.2
       def has_many_mongoid(klass)
         class_eval <<-CODE
           def #{klass}
@@ -22,12 +31,25 @@ module Consort
         CODE
       end
 
-      # DEPRECATED. Pass through for now. Removed in 1.0.0.
+      # @deprecated Use {#has_many_mongoid} instead. Will be removed in 1.0.0.
       def has_many_mongoids(klass)
         ActiveSupport::Deprecation.warn 'Please use the singular has_many_mongoid instead.'
         has_many_mongoid(klass)
       end
 
+      # Defines a `belongs_to` relationship with a Mongoid object.
+      # An appropriate foreign key column (of type String) must exist on your model.
+      # @param klass [Symbol] 
+      # @example Migration
+      #   class AddMongoidFKeyToNarwhals < ActiveRecord::Migration
+      #     def change
+      #       add_column :narwhals, :pod_id, :string
+      #     end
+      #   end
+      # @example Model
+      #   class Narwhal < ActiveRecord::Base
+      #     belongs_to_mongoid :pod
+      #   end
       def belongs_to_mongoid(klass)
         class_eval <<-CODE
           def #{klass}
@@ -35,7 +57,9 @@ module Consort
           end
         CODE
       end
-
+      
+      # Allows easy validation of whether ActiveRecord to Mongoid bridge is loaded.
+      # @return [Boolean] `true` if bridge is loaded
       def active_record_consorts_with_mongoid?
         true
       end
