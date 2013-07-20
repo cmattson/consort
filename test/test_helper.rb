@@ -2,8 +2,19 @@ plugin_test_dir = File.dirname(__FILE__)
 
 require 'rubygems'
 
+require 'simplecov'
 require 'coveralls'
-Coveralls.wear!
+
+unless ENV["TRAVIS"]
+  SimpleCov.start do
+    add_filter '/test/'
+  end
+else
+  SimpleCov.formatter = Coveralls::SimpleCov::Formatter
+  SimpleCov.start do
+    add_filter '/test'
+  end
+end
 
 require 'bundler/setup'
 require 'pry'
