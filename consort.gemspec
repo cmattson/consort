@@ -24,6 +24,7 @@ Gem::Specification.new do |spec|
   spec.add_development_dependency "activesupport",  "~> 3.2"
   spec.add_development_dependency "activerecord",   "~> 3.2"
   spec.add_development_dependency "mongoid",        "~> 3.1"
+  spec.add_development_dependency "simplecov"
   spec.add_development_dependency "coveralls"
   spec.add_development_dependency "sqlite3"
   spec.add_development_dependency "pry"
