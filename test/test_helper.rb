@@ -5,15 +5,12 @@ require 'rubygems'
 require 'simplecov'
 require 'coveralls'
 
-unless ENV["TRAVIS"]
-  SimpleCov.start do
-    add_filter '/test/'
-  end
-else
+if ENV["TRAVIS"]
   SimpleCov.formatter = Coveralls::SimpleCov::Formatter
-  SimpleCov.start do
-    add_filter '/test'
-  end
+end
+
+SimpleCov.start do
+  add_filter '/test'
 end
 
 require 'bundler/setup'
