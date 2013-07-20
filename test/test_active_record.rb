@@ -43,4 +43,9 @@ class TestActiveRecord < MiniTest::Unit::TestCase
     assert_equal true, @u.respond_to?('congo')
     assert_equal false, @u.respond_to?('congos')
   end
+  
+  def test_implements_consorts
+    assert ActiveRecord::Base.respond_to?('active_record_consorts_with_mongoid?')
+    assert ActiveRecord::Base.active_record_consorts_with_mongoid?
+  end
 end
