@@ -1,3 +1,7 @@
+## master
+
+* Travis now tests against Rails 3.1.12, 3.2.13, 4.0.0.
+
 ## 0.0.2
 
 * Improved readability of macros. `has_many_*` methods are now singular.
