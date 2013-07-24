@@ -33,7 +33,7 @@ Or install it yourself as:
 
 Ruby 1.9.3 or 2.0.0. Alternate VMs compatible with these versions should also work.
 
-Ruby 1.8 is not supported.
+Ruby 1.8 is not supported. Let the dead rest in peace!
 
 ### Rails Compatibility
 
@@ -78,13 +78,37 @@ class Airframe
 end
 ```
 
-*Nota bene:* Consort currently provides only basic association accessors.  It does not implement callbacks. Consort also does not currently implement many-to-many associations. I've rarely run into a situation where cross-ORM many-to-many associations make sense, and implementing them would require making opinionated decisions I don't care to make without community input. If this is something you find yourself needing immediately, you'll have to implement it yourself. (Pull requests and feedback are welcome.)
+### Unimplemented Features
+There are several things Consort doesn't (currently) do, either because I haven't
+seen them used when mixing object mappers, or because they may have horrible
+unintended consequences.
+
+This doesn't mean Consort **shouldn't** do them; if you have a use case for a
+missing feature, feel free to implement it and send a pull request, or create an
+issue with a feature request.
+
+#### Many-to-Many Relationships
+Consort doesn't support many-to-many relationships. I've rarely run into a
+situation where they make sense in cross-ORM applications, and implementing them
+would require making decisions like "where do we store them?". 
+
+#### Polymorphism
+Also low on the list of use cases. 
+
+#### Callbacks
+This falls into the potential horrible unintended consequences group.
+
+Consort *does not* currently implement automatic callbacks (e.g. destroying a
+Mongoid object automatically when its parent ActiveRecord object is destroyed). If
+creating/altering/deleting an object from one object mapper should
+create/alter/delete an associated object from a different object mapper, you
+currently need to take care of this yourself.
 
 ## Contributing
 
 1. [Fork it](https://github.com/cmattson/consort/fork)
 2. Create your feature branch (`git checkout -b my-new-feature`)
-3. No, seriously, create a branch. Call it `ravenous-monkey` for all I care, but create a branch.
+3. No, seriously, create a branch. Please. Call it `ravenous-monkey` for all I care, but create a branch.
 4. Commit your changes (`git commit -am 'Add some feature'`)
 5. Push to the branch (`git push origin my-new-feature`)
 6. Create new Pull Request
