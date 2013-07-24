@@ -1,5 +1,6 @@
-## master
+## 0.0.3
 
+* Restructured modules. Now in format `Consort::FromORM::ToORM`.
 * Travis now tests against Rails 3.1.12, 3.2.13, 4.0.0.
 
 ## 0.0.2
