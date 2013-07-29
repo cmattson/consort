@@ -1,6 +1,6 @@
 module Consort
   ##
-  # Defines methods on ActiveRecord objects for creating NoSQL
+  # Defines methods on ActiveRecord objects for creating Mongoid
   # relationships and accessing those related objects.
   module ActiveRecord
     module Mongoid
@@ -32,9 +32,9 @@ module Consort
           CODE
         end
 
-        # @deprecated Use {#has_many_mongoid} instead. Will be removed in 1.0.0.
+        # @deprecated Use {#has_many_mongoid} instead. Will be removed soon.
         def has_many_mongoids(klass)
-          ActiveSupport::Deprecation.warn 'Please use the singular has_many_mongoid instead.'
+          ActiveSupport::Deprecation.warn 'This method will be removed in 3 releases. Please use the singular has_many_mongoid instead.'
           has_many_mongoid(klass)
         end
 
