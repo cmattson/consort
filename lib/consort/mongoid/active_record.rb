@@ -29,9 +29,9 @@ module Consort
           CODE
         end
 
-        # @deprecated Use {#has_many_active_record} instead. Will be removed in 1.0.0.
+        # @deprecated Use {#has_many_active_record} instead. Will be removed soon.
         def has_many_active_records(klass)
-          ActiveSupport::Deprecation.warn 'Please use the singular has_many_active_record instead.'
+          ActiveSupport::Deprecation.warn 'This method will be removed in 3 releases. Please use the singular has_many_active_record instead.'
           has_many_active_record(klass)
         end
 
