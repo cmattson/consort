@@ -83,7 +83,7 @@ There are several things Consort doesn't (currently) do, either because I haven'
 seen them used when mixing object mappers, or because they may have horrible
 unintended consequences.
 
-This doesn't mean Consort **shouldn't** do them; if you have a use case for a
+This doesn't mean Consort *shouldn't* do them; if you have a use case for a
 missing feature, feel free to implement it and send a pull request, or create an
 issue with a feature request.
 
