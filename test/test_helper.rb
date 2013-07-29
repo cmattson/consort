@@ -24,8 +24,9 @@ require 'minitest/spec'
 require 'minitest/pride'
 require 'minitest/benchmark' if ENV['BENCH']
 
-# require 'active_record'
-# require 'mongoid'
+require 'active_record'
+require 'mongoid'
+require 'mongo_mapper'
 
 require 'consort'
 
