@@ -1,8 +1,4 @@
-## master
-
-* Nothing yet!
-
-## 0.1.0pre1
+## 0.1.0
 
 * Added support for Rails/ActiveSupport 3.1.
 * Added support for Rails/ActiveSupport 4.
