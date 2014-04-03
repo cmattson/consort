@@ -1,4 +1,4 @@
-## 0.1.0
+## 0.1.1
 
 * Added support for Rails/ActiveSupport 3.1.
 * Added support for Rails/ActiveSupport 4.
