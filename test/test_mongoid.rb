@@ -36,10 +36,9 @@ class TestMongoid < MiniTest::Unit::TestCase
     @c = Camel.new
     assert_equal true,  @c.respond_to?('species')
   end
-  
+
   def test_implements_consorts
     assert Camel.respond_to?('mongoid_consorts_with_active_record?')
     assert Camel.mongoid_consorts_with_active_record?
   end
-
 end

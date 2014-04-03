@@ -35,7 +35,7 @@ end
 class FlippySeaCreature
   include MongoMapper::Document
   has_many_active_record :pinnipeds
-  
+
   key :flippers, Integer
 end
 
@@ -49,7 +49,7 @@ class Seal
   include MongoMapper::Document
   belongs_to_active_record :pinniped
   key :pinniped_id, Integer
-  
+
   key :name, String
   key :hairiness, Integer
 end
@@ -58,12 +58,12 @@ class SeaLion
   include MongoMapper::Document
   belongs_to_active_record :pinniped
 end
-  
+
 class Walrus
   include MongoMapper::Document
   belongs_to_active_record :pinniped
   key :pinniped_id, Integer
-  
+
   key :tusk_length, Integer
 end
 

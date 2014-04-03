@@ -17,7 +17,7 @@ module Consort
         end
 
         # Defines a `has_many` relationship with an ActiveRecord object.
-        # @param klass [Symbol] 
+        # @param klass [Symbol]
         # @example
         #   has_many_active_record :unicorns
         # @since 0.0.2
@@ -37,7 +37,7 @@ module Consort
 
         # Defines a `belongs_to` relationship with an ActiveRecord object.
         # An appropriate foreign key field must exist on your model.
-        # @param klass [Symbol] 
+        # @param klass [Symbol]
         # @example
         #   class Narwhal
         #     include Mongoid::Document

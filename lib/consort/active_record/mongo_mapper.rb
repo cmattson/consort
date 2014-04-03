@@ -20,7 +20,7 @@ module Consort
         end
 
         # Defines a `has_many` relationship with a MongoMapper object.
-        # @param klass [Symbol] 
+        # @param klass [Symbol]
         # @example
         #   has_many_mongo_mapper :unicorns
         # @since 0.0.2
@@ -40,7 +40,7 @@ module Consort
 
         # Defines a `belongs_to` relationship with a MongoMapper object.
         # An appropriate foreign key column (of type String) must exist on your model.
-        # @param klass [Symbol] 
+        # @param klass [Symbol]
         # @example Migration
         #   class AddMongoMapperFKeyToNarwhals < ActiveRecord::Migration
         #     def change
@@ -58,7 +58,7 @@ module Consort
             end
           CODE
         end
-      
+
         # Allows easy validation of whether ActiveRecord to MongoMapper bridge is loaded.
         # @return [Boolean] `true` if bridge is loaded
         def active_record_consorts_with_mongo_mapper?
@@ -69,8 +69,8 @@ module Consort
   end
 end
 
-#if defined?(ActiveRecord::Base)
+# if defined?(ActiveRecord::Base)
 class ActiveRecord::Base
   include Consort::ActiveRecord::MongoMapper
 end
-#end
+# end
