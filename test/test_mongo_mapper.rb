@@ -1,6 +1,6 @@
 require 'minitest/autorun'
 
-class TestMongoMapper < MiniTest::Unit::TestCase
+class TestMongoMapper < MiniTest::Test
   def setup
 #    MongoMapper.database = 'test_consort'
   end

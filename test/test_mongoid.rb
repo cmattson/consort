@@ -1,6 +1,6 @@
 require 'minitest/autorun'
 
-class TestMongoid < MiniTest::Unit::TestCase
+class TestMongoid < MiniTest::Test
   def setup
   end
 
