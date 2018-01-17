@@ -14,7 +14,7 @@ SimpleCov.start do
 end
 
 require 'bundler/setup'
-require 'pry'
+require 'byebug'
 
 require 'combustion'
 
@@ -33,7 +33,8 @@ require 'consort'
 require 'yaml'
 require 'erb'
 ActiveRecord::Base.configurations = YAML.load(ERB.new(IO.read(plugin_test_dir + '/db/database.yml')).result)
-ActiveRecord::Base.establish_connection(ENV['DB'] ||= 'sqlite3mem')
+ENV['DB'] ||= :sqlite3mem.to_s
+ActiveRecord::Base.establish_connection(:sqlite3mem)
 ActiveRecord::Migration.verbose = false
 
 require 'combustion/database'
