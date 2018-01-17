@@ -14,7 +14,7 @@ SimpleCov.start do
 end
 
 require 'bundler/setup'
-require 'byebug'
+# require 'byebug'
 
 require 'combustion'
 
