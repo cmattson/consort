@@ -32,12 +32,6 @@ module Consort
           CODE
         end
 
-        # @deprecated Use {#has_many_mongoid} instead. Will be removed soon.
-        def has_many_mongoids(klass)
-          ActiveSupport::Deprecation.warn 'This method will be removed in 3 releases. Please use the singular has_many_mongoid instead.'
-          has_many_mongoid(klass)
-        end
-
         # Defines a `belongs_to` relationship with a Mongoid object.
         # An appropriate foreign key column (of type String) must exist on your
         # model.

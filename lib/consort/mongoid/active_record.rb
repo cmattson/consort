@@ -29,12 +29,6 @@ module Consort
           CODE
         end
 
-        # @deprecated Use {#has_many_active_record} instead. Will be removed soon.
-        def has_many_active_records(klass)
-          ActiveSupport::Deprecation.warn 'This method will be removed in 3 releases. Please use the singular has_many_active_record instead.'
-          has_many_active_record(klass)
-        end
-
         # Defines a `belongs_to` relationship with an ActiveRecord object.
         # An appropriate foreign key field must exist on your model.
         # @param klass [Symbol]

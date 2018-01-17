@@ -15,10 +15,10 @@ class TestActiveRecord < MiniTest::Test
     assert_equal true, ActiveRecord::Base.respond_to?('has_many_mongoid')
   end
 
-  # Deprecated form still available.
+  # Deprecated form is deprecated.
   def test_active_record_has_many_mongoids_defined
-    assert_equal 'method', defined? ActiveRecord::Base.has_many_mongoids
-    assert_equal true, ActiveRecord::Base.respond_to?('has_many_mongoids')
+    assert_nil defined? ActiveRecord::Base.has_many_mongoids
+    assert_equal false, ActiveRecord::Base.respond_to?('has_many_mongoids')
   end
 
   def test_active_record_belongs_to_mongoid_defined

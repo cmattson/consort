@@ -13,7 +13,7 @@ class TestMongoid < MiniTest::Test
   end
 
   def test_mongoid_has_many_active_records_defined
-    assert_equal true, Camel.respond_to?(:has_many_active_records)
+    assert_equal false, Camel.respond_to?(:has_many_active_records)
   end
 
   def test_mongoid_belongs_to_active_record_defined
