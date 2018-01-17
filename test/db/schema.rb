@@ -1,5 +1,4 @@
 ActiveRecord::Schema.define(version: 0) do
-
   create_table :ungulates, force: true do |t|
     t.column :name, :string
     t.column :congo_id, :string

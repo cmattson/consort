@@ -53,7 +53,8 @@ module Consort
           CODE
         end
 
-        # Allows easy validation of whether Mongoid to ActiveRecord bridge is loaded.
+        # Allows easy validation of whether Mongoid to ActiveRecord bridge is
+        # loaded.
         # @return [Boolean] `true` if bridge is loaded
         def mongoid_consorts_with_active_record?
           true

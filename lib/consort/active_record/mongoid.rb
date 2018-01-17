@@ -39,7 +39,8 @@ module Consort
         end
 
         # Defines a `belongs_to` relationship with a Mongoid object.
-        # An appropriate foreign key column (of type String) must exist on your model.
+        # An appropriate foreign key column (of type String) must exist on your
+        # model.
         # @param klass [Symbol]
         # @example Migration
         #   class AddMongoidFKeyToNarwhals < ActiveRecord::Migration
@@ -59,7 +60,8 @@ module Consort
           CODE
         end
 
-        # Allows easy validation of whether ActiveRecord to Mongoid bridge is loaded.
+        # Allows easy validation of whether ActiveRecord to Mongoid bridge is
+        # loaded.
         # @return [Boolean] `true` if bridge is loaded
         def active_record_consorts_with_mongoid?
           true
