@@ -31,19 +31,29 @@ Or install it yourself as:
 
 ## Requirements
 
-Ruby 1.9.3 or 2.0.0. Alternate VMs compatible with these versions should also work.
+A currently-supported Ruby version (2.2.x – 2.5.x). Alternate VMs compatible with these versions *should* also work. If you're using an alternative interpreter and would like it added to the test matrix, let me know!
 
-Ruby 1.8 is not supported. Let the dead rest in peace!
+**N.B.**: Versions (i.e. 2.2) will be dropped from this list as they leave maintenance. If you're still using Ruby 2.2, now's a great time to consider updating.
+
+Ruby 1.8 and 1.9 are not supported. Let the dead rest in peace!
 
 ### Rails Compatibility
 
-Consort currently targets Rails 3.2 (or, more accurately, ActiveSupport and ActiveRecord 3.2). Mongoid and several other ORM/ODM layers have not yet been updated for Rails 4, and most new and existing projects are continuing to use Rails 3.2 for now.
+Consort 1.x targets Rails 5 (or, more accurately, ActiveSupport and ActiveRecord 5.0 and 5.1).
 
-Rails 4 support is planned.
+Rails 5.2 support will be finalized as Rails 5.2 reaches RC.
+
+The support window for Consort generally follows the [Ruby on Rails Maintenace Policy](http://guides.rubyonrails.org/maintenance_policy.html).
+
+### ODM Compatibility
+
+Consort currently supports ActiveRecord 5 and Mongoid 6.
+
+While MongoMapper support was available in a previous Consort release, MongoMapper is no longer actively updated and does not support current versions of Mongo or Rails.
 
 ### Continuous Integration
 
-Automated CI testing is performed against Ruby 1.9.3 and 2.0.0 using ActiveRecord and ActiveSupport 3.1, 3.2, and 4.0. 
+Automated CI testing is performed against Ruby 2.2.9, 2.3.6, 2.4.3, and 2.5.0 using ActiveRecord and ActiveSupport 5.0 and 5.1.
 
 ## Usage
 
@@ -72,7 +82,7 @@ class Airframe
   belongs_to_active_record  :manufacturer
   has_one_active_record     :powerplant
   has_many_active_record    :variants
-  
+
   # Consort expects a foreign key field
   field :manufacturer_id,   type: Integer
 end
@@ -90,10 +100,10 @@ issue with a feature request.
 #### Many-to-Many Relationships
 Consort doesn't support many-to-many relationships. I've rarely run into a
 situation where they make sense in cross-ORM applications, and implementing them
-would require making decisions like "where do we store them?". 
+would require making decisions like "where do we store them?".
 
 #### Polymorphism
-Also low on the list of use cases. 
+Also low on the list of use cases.
 
 #### Callbacks
 This falls into the potential horrible unintended consequences group.
@@ -113,7 +123,7 @@ currently need to take care of this yourself.
 5. Push to the branch (`git push origin my-new-feature`)
 6. Create new Pull Request
 
-Make sure you include tests! Tests are good. Tests are required. All hail tests. 
+Make sure you include tests! Tests are good. Tests are required. All hail tests.
 
 Consort tests are built with Minitest; beyond that, I'm flexible. `Minitest::Unit` and `Minitest::Spec` are both fine.
 

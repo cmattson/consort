@@ -20,19 +20,19 @@ Gem::Specification.new do |spec|
 
   spec.add_development_dependency "bundler",        "~> 1.3"
   spec.add_development_dependency "rake"
-  spec.add_development_dependency "minitest",       "~> 4.7"
-  spec.add_development_dependency "activesupport",  "~> 3.2"
-  spec.add_development_dependency "activerecord",   "~> 3.2"
-  spec.add_development_dependency "mongoid",        "~> 3.1"
-  spec.add_development_dependency "mongo_mapper",   "~> 0.12"
+  spec.add_development_dependency "minitest",       "~> 5.1"
+  spec.add_development_dependency "activesupport",  "~> 5.1"
+  spec.add_development_dependency "activerecord",   "~> 5.1"
+  spec.add_development_dependency "mongoid",        "~> 6.1"
+  # spec.add_development_dependency "mongo_mapper",   ">= 0.14"
   spec.add_development_dependency "simplecov"
   spec.add_development_dependency "coveralls"
   spec.add_development_dependency "sqlite3"
-  spec.add_development_dependency "pry"
-  spec.add_development_dependency "combustion"
-  spec.add_development_dependency "bson_ext"
+  spec.add_development_dependency "byebug"
+  spec.add_development_dependency 'combustion', '>= 0.5.2', '< 0.5.5'
+  # spec.add_development_dependency "bson_ext"
 
-  spec.add_runtime_dependency     "activesupport",  ['>= 3.1', '< 4.1']
+  spec.add_runtime_dependency     "activesupport",  ['>= 5.1', '< 5.2']
 #  spec.add_runtime_dependency     "activerecord",   "~> 3.2"
 #  spec.add_runtime_dependency     "mongoid",        "~> 3.1"
 end
