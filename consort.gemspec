@@ -28,7 +28,6 @@ Gem::Specification.new do |spec|
   spec.add_development_dependency 'coveralls'
   spec.add_development_dependency 'sqlite3'
   spec.add_development_dependency 'byebug'
-  spec.add_development_dependency 'combustion', '>= 0.5.2', '< 0.5.5'
   # spec.add_development_dependency 'bson_ext'
 
   spec.add_runtime_dependency     'activesupport',  ['>= 5.1', '< 5.2']
