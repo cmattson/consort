@@ -49,7 +49,7 @@ The support window for Consort generally follows the [Ruby on Rails Maintenace P
 
 Consort currently supports ActiveRecord 5 and Mongoid 6.
 
-While MongoMapper support was available in a previous Consort release, MongoMapper is no longer actively updated and does not support current versions of Mongo or Rails.
+While MongoMapper support was available in a previous Consort release, MongoMapper is no longer actively updated and does not support current versions of the `mongo` gem or Rails.
 
 ### Continuous Integration
 
