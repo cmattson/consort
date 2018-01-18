@@ -1,9 +1,9 @@
 # Consort
 
-[![Build Status](https://travis-ci.org/cmattson/consort.png?branch=master)](https://travis-ci.org/cmattson/consort)
-[![Coverage Status](https://coveralls.io/repos/cmattson/consort/badge.png)](https://coveralls.io/r/cmattson/consort)
-[![Code Climate](https://codeclimate.com/github/cmattson/consort.png)](https://codeclimate.com/github/cmattson/consort)
-[![Gem Version](https://badge.fury.io/rb/consort.png)](http://badge.fury.io/rb/consort)
+[![Build Status](https://travis-ci.org/cmattson/consort.svg?branch=master)](https://travis-ci.org/cmattson/consort)
+[![Coverage Status](https://coveralls.io/repos/github/cmattson/consort/badge.svg)](https://coveralls.io/github/cmattson/consort)
+[![Maintainability](https://api.codeclimate.com/v1/badges/63ec3c1b098954cce471/maintainability)](https://codeclimate.com/github/cmattson/consort/maintainability)
+[![Gem Version](https://badge.fury.io/rb/consort.svg)](https://badge.fury.io/rb/consort)
 
 Mixing ActiveRecord and other ORMs like Mongoid? Need relationships between those data layers? Really hate either implementing a bunch of accessors or copy-pasting the same metaprogramming over and over again?
 
