@@ -45,7 +45,7 @@ Consort 1.x targets Rails 5 (or, more accurately, ActiveSupport and ActiveRecord
 
 Rails 5.2 support will be finalized as Rails 5.2 reaches RC.
 
-The support window for Consort generally follows the [Ruby on Rails Maintenace Policy](http://guides.rubyonrails.org/maintenance_policy.html).
+The support window for Consort generally follows the [Ruby on Rails Maintenance Policy](http://guides.rubyonrails.org/maintenance_policy.html).
 
 ### ODM Compatibility
 
