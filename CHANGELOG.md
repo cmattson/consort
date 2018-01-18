@@ -3,8 +3,9 @@
 * Removed Travis testing for legacy Ruby versions.
 * Removed support for legacy Rails versions.
 * Removed support for MongoMapper.
-* Added support for Rails/ActiveSupport 5.1.
-* Updated Travis to test against currently-supported Ruby versions (2.2, 2.3, 2.4, 2.5).
+* Added support for Rails/ActiveSupport 5.0.x.
+* Added support for Rails/ActiveSupport 5.1.x.
+* Updated Travis to test against currently-supported Ruby versions (2.2, 2.3, 2.4).
 * Replaced pry with byebug.
 
 ## 0.1.1
