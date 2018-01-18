@@ -6,4 +6,5 @@ rvm:
   # - 2.5.0
   # - ruby-head
 gemfile:
+  - gemfiles/Gemfile.rails-5.0.x
   - gemfiles/Gemfile.rails-5.1.x
