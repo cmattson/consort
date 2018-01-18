@@ -31,9 +31,11 @@ Or install it yourself as:
 
 ## Requirements
 
-A currently-supported Ruby version (2.2.x – 2.5.x). Alternate VMs compatible with these versions *should* also work. If you're using an alternative interpreter and would like it added to the test matrix, let me know!
+A currently-supported Ruby version (2.2.x – 2.5.x). Alternate VMs compatible with these versions *should* also work. If you're using an alternative interpreter and would like it added to the CI test matrix, let me know!
 
-**N.B.**: Versions (i.e. 2.2) will be dropped from this list as they leave maintenance. If you're still using Ruby 2.2, now's a great time to consider updating.
+**Note:** CI testing for 2.5 is currently disabled due to travis-ci/travis-ci#8969. I'm using 2.5 in development and Consort should work as expected in up-to-date installations of Ruby 2.5, but please open an issue if you run into problems.
+
+**N.B.**: Ruby versions (i.e. 2.2) will be dropped from this list as they leave maintenance. If you're still using Ruby 2.2, now's a great time to consider updating.
 
 Ruby 1.8 and 1.9 are not supported. Let the dead rest in peace!
 
